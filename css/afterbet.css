@@ -1,0 +1,162 @@
+/* 설명 컨테이너 */
+#sub_dec {
+  text-align: center;
+  padding: 0 5vw;
+  margin-bottom: 3vh;
+}
+
+/*케이스 박스 설정 */
+.case_box {
+  width: 80vw;
+  max-width: 1000px;
+  height: auto;
+  padding: 1vh 3vw;
+  margin-bottom: 3vh;
+  display: inline-flex;
+  text-align: center;
+  justify-content: space-between;
+  background-color: #00363a;
+  flex-wrap: wrap;
+}
+
+/* 케이스 버튼 설정 */
+.case {
+  width: 5vw;
+  max-width: 50px;
+  min-width: 40px;
+  height: 5vw;
+  max-height: 50px;
+  min-height: 40px;
+  font-size: 25px;
+  border-radius: 10%;
+  border: 2px #00363a solid;
+  background-color: white;
+  cursor: pointer;
+}
+
+.case:hover {
+  background-color: rgb(255, 234, 117);
+}
+
+.case:visited {
+  background-color: grey;
+}
+
+/* 종가베팅 게임 화면 박스 */
+.afbet_game {
+  max-width: 1000px;
+  width: 80vw;
+  text-align: center;
+}
+
+/* 정보 버튼 styling */
+.info_button button {
+  width: 100px;
+  height: 50px;
+  font-size: 18px;
+  margin-bottom: 3%;
+  cursor: pointer;
+}
+
+/* 메인 콘텐츠 영역 */
+#contents {
+  max-width: 1000px;
+  height: 500px;
+  margin-bottom: 3%;
+}
+
+/* 컨텐츠 숨기기 */
+.minchart {
+  display: none;
+}
+
+.news {
+  display: none;
+  text-align: left;
+}
+
+/* 결과 공개 */
+.finish {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 3rem;
+  position: fixed;
+  top: 35%;
+  left: 15%;
+  height: 35%;
+  width: 70%;
+  display: none;
+}
+
+.ab_homeA {
+  display: none;
+}
+
+.next_caseA {
+  display: none;
+}
+
+.ab_home {
+  width: 100px;
+  height: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: rgba(66, 108, 180, 0.692);
+}
+
+#next_case {
+  width: 100px;
+  height: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: gray;
+}
+
+/* 타이머 */
+#timer {
+  background-color: red;
+  font-size: 2rem;
+  padding: 0 0.5rem;
+  font-weight: bold;
+  border: 2px black solid;
+  cursor: default;
+}
+
+/* 매도, 홀딩 버튼 영역 */
+.ab_choice {
+  margin: 4% 0;
+}
+
+/* 매도, 홀딩 버튼 스타일링 */
+.ab_choice button {
+  width: 100px;
+  height: 50px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+}
+
+#ab_sell {
+  background-color: rgba(66, 108, 180, 0.692);
+}
+
+#ab_hold {
+  background-color: gray;
+}
+
+/* 선택 버튼 호버 */
+.ab_choice button:hover {
+  border: 3px #00363a solid;
+}
+
+/*화면 가로가 768px 이하로 줄어들면 화면 변경*/
+@media screen and (max-width: 768px) {
+  #timer {
+    position: fixed;
+    display: inline-block;
+    left: 5%;
+    top: 10%;
+    margin: 0;
+  }
+}

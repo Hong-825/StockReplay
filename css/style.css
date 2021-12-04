@@ -1,0 +1,177 @@
+/*전체 화면크기 지정*/
+html,
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  width: auto;
+  height: auto;
+  margin: 0;
+}
+
+/*링크에 밑줄 없애기*/
+a {
+  text-decoration: none;
+}
+
+/*이미지 부모 태그 사이즈 안벗어나게 하기*/
+img {
+  max-width: 100%;
+}
+
+/*네비게이션바 크기 지정*/
+.navbar {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  position: relative;
+  background-color: #00363a;
+}
+
+/*사이트 제목 스타일*/
+#title {
+  font-size: 1.5rem;
+  padding-left: 30px;
+  color: #ffffff;
+  width: 150px;
+  position: relative;
+  left: 3%;
+}
+
+/*나머지 네비 메뉴*/
+.navi_menu {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  padding-right: 5%;
+}
+
+/*네비 메뉴 리스트*/
+.navi_menu li {
+  padding: 8px 0px;
+}
+
+.navi_menu a {
+  color: #ffffff;
+}
+
+/*네비게이션 호버 효과*/
+nav a {
+  position: relative;
+  display: inline-block;
+  outline: none;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 400;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+  font-size: 1rem;
+}
+
+nav a:hover,
+nav a:focus {
+  outline: none;
+}
+
+.cl-effect-1 a::before,
+.cl-effect-1 a::after {
+  display: inline-block;
+  opacity: 0;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+  -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+  transition: transform 0.3s, opacity 0.2s;
+}
+
+.cl-effect-1 a::before {
+  margin-right: 10px;
+  content: "[";
+  -webkit-transform: translateX(20px);
+  -moz-transform: translateX(20px);
+  transform: translateX(20px);
+}
+
+.cl-effect-1 a::after {
+  margin-left: 10px;
+  content: "]";
+  -webkit-transform: translateX(-20px);
+  -moz-transform: translateX(-20px);
+  transform: translateX(-20px);
+}
+
+.cl-effect-1 a:hover::before,
+.cl-effect-1 a:hover::after,
+.cl-effect-1 a:focus::before,
+.cl-effect-1 a:focus::after {
+  opacity: 1;
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  transform: translateX(0px);
+}
+
+/*화면 작을 때 토글 버튼*/
+.navbar_toggleBtn {
+  display: none;
+  position: absolute;
+  right: 32px;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+/*메인 화면 컨테이너*/
+.container {
+  display: grid;
+  width: 100%;
+  justify-items: center;
+  background-color: #eeeeee;
+}
+
+/*사이트 설명*/
+#main_dec {
+  padding: 20px 25px;
+  width: 1fr;
+  text-align: center;
+}
+
+/*종가베팅 입장 버튼*/
+#afterbet_in {
+  width: 15rem;
+  font-size: 1rem;
+  padding: 5px;
+  margin-bottom: 2%;
+}
+
+/*카피라이트 부분*/
+footer {
+  margin-top: 30px;
+  height: 50px;
+  width: 100%;
+  text-align: center;
+}
+
+/*화면 가로가 768px 이하로 줄어들면 화면 변경*/
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 24px;
+  }
+
+  .navi_menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .navi_menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar_toggleBtn {
+    display: block;
+  }
+
+  .navi_menu.active {
+    display: flex;
+  }
+}

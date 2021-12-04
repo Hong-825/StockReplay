@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="실제 주식데이터로 하는 주식 매매게임">
+
+  <!--구글 폰트 연결-->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+
+  <!--파비콘 연결-->
+  <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+
+  <!--스타일 css 연결-->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/afterbet.css">
+
+  <!--js 연결-->
+  <script src="../js/main.js" defer></script>
+  <script src="../js/timer.js" defer></script>
+  <script src="../js/afterbet.js" defer></script>
+
+  <!--무료 아이콘 넣어주는 폰트 어썸 연결-->
+  <script src="https://kit.fontawesome.com/9b0041d250.js" crossorigin="anonymous"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QXBG5CD5SW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-QXBG5CD5SW');
+  </script>
+
+  <title>주식 리플레이</title>
+</head>
+
+<body>
+  <nav class="navbar">
+    <a href="index.html" id="title">주식 리플레이</a>
+    <ul class="navi_menu cl-effect-1">
+      <li><a href="afterbet.html">종가베팅</a></li>
+      <li><a href="#" onclick="alert('준비 중입니다.')">직장인 매매</a></li>
+      <li><a href="#" onclick="alert('준비 중입니다.')">상한가 따라잡기</a></li>
+      <li><a href="#" onclick="alert('준비 중입니다.')">신규상장 공모</a></li>
+    </ul>
+
+    <a href="#" class="navbar_toggleBtn">
+      <i class="fas fa-bars"></i>
+    </a>
+  </nav>
+
+  <main class="container">
+    <h2>종가베팅 case 1</h2>
+    <div class="afbet_game">
+      <div class="info_button">
+        <button id="ab_daychart" onclick="day_button()">일봉 차트
+        </button>
+        <button id="ab_minchart" onclick="min_button()">
+          분봉차트
+        </button>
+        <button id="news" onclick="news_button()">뉴스</button>
+      </div>
+      <div id="contents">
+        <div class="daychart">
+          <img src="../images/afterbet/case1/day.jpg">
+        </div>
+        <div class="minchart">
+          <img id="img_cg" src="../images/afterbet/case1/min1.jpg">
+        </div>
+        <div class="news">
+          <h2>KMH 경영권 분쟁, 임시주총에서 2대주주 키스톤PE 완승!</h2>
+          <p>기사입력 2020. 10. 14 오후 6:00</p>
+          <p>KMH(122450)의 임시주주총회에서 최대주주인 경영진 측이 상정한 이사 선임, 감사 선임 안건이 모두 부결됐다. 2대 주주인 키스톤PE 측이 기존 경영진의 방침에 제동을 건 셈이다.</p>
+          <p>지난 8월 31일 KMH 지분 25.06%를 약 500억원에 취득해 2대주주로 등극한 키스톤PE를 견제하기 위해 전환사채 발행과 임시주총을 통한 이사 선임을 현 경영진이 시도했지만 소액주주들이
+            약 20%에 가까운 지분을 키스톤PE 측에 위임하면서 주주총회는 키스톤PE의 승리로 끝이 났다.</p>
+          <p>이로인해 KMH 현 경영진과 키스톤PE의 경영권을 놓고 갈등이 커질 것이라는 전망 속에 두 주주의 지분 확대 가능성에 대한 기대감으로 매수세가 몰려 KMH와 KMH의 자회사 KMH하이텍 모두
+            나란히 상한가를 기록하게 되었다.</p>
+        </div>
+        <div class="finish">
+        </div>
+      </div>
+      <span id="timer"></span>
+
+      <div class="ab_choice">
+        <button id="ab_sell" onclick="end_game(case1[i-1]); resultEnd()">매도</button>
+        <button id="ab_hold" onclick="min_change(); timerReset()">홀딩</button>
+        <a class="ab_homeA" href="../afterbet.html"><button class="ab_home">게임 홈</button></a>
+        <a class="next_caseA" href="#"><button id="next_case">다음 케이스</button></a>
+      </div>
+    </div>
+  </main>
+  <footer>
+    copyright 2020. 한칼도사 All rights reserved.
+  </footer>
+
+</body>
+
+</html>

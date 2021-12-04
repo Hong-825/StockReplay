@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="실제 주식데이터로 하는 주식 매매게임">
+
+  <!--구글 폰트 연결-->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+
+  <!--파비콘 연결-->
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+
+  <!--스타일 css 연결-->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/afterbet.css">
+
+  <!--메인 버튼 호버 css 연결-->
+  <link rel="stylesheet" href="css/button.css">
+
+  <!--무료 아이콘 넣어주는 폰트 어썸 연결-->
+  <script src="https://kit.fontawesome.com/9b0041d250.js" crossorigin="anonymous"></script>
+
+  <!--js 연결-->
+  <script src="js/main.js" defer></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QXBG5CD5SW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-QXBG5CD5SW');
+  </script>
+
+  <title>주식 리플레이</title>
+</head>
+
+<body>
+  <nav class="navbar">
+    <a href="index.html" id="title">주식 리플레이</a>
+    <ul class="navi_menu cl-effect-1">
+      <li><a href="afterbet.html">종가베팅</a></li>
+      <li><a href="#" onclick="alert('준비 중입니다.')">직장인 매매</a></li>
+      <li><a href="#" onclick="alert('준비 중입니다.')">상한가 따라잡기</a></li>
+      <li><a href="#" onclick="alert('준비 중입니다.')">신규상장 공모</a></li>
+    </ul>
+
+    <a href="#" class="navbar_toggleBtn">
+      <i class="fas fa-bars"></i>
+    </a>
+  </nav>
+
+  <main class="container">
+    <div id="sub_dec">
+      <h1>종가베팅</h1>
+      <p>많은 단기매매 고수들이 말합니다. "종가베팅이 주력 매매"라고.
+        <br>여러가지 형태의 종가베팅이 있지만 장중 보유시간을 최대한 줄여서 심리적으로 편안하고 회전율 역시 높은 매우 효율적인 매매 방법이라고 할 수 있습니다.
+        <br>조금 더 나가자면 하루거래시간 중 주식시장의 거래활성도와의 상관관계로 볼 때도 유효한 매매입니다.</P>
+      <P>이곳에서는 실제 주식시장의 데이터가 적용되어 종가베팅된 상황이 주어집니다.<br>
+        여러분은 일봉, 분봉, 뉴스를 참고해 최적의 매도를 해내야 합니다.</P>
+    </div>
+    <div class="case_box">
+      <button class="case" onclick="location.href='afterbet/af_1.html'">1</button>
+      <button class="case" onclick="alert('준비 중입니다.')">2</button>
+      <button class="case" onclick="alert('준비 중입니다.')">3</button>
+      <button class="case" onclick="alert('준비 중입니다.')">4</button>
+      <button class="case" onclick="alert('준비 중입니다.')">5</button>
+      <button class="case" onclick="alert('준비 중입니다.')">6</button>
+      <button class="case" onclick="alert('준비 중입니다.')">7</button>
+      <button class="case" onclick="alert('준비 중입니다.')">8</button>
+      <button class="case" onclick="alert('준비 중입니다.')">9</button>
+      <button class="case" onclick="alert('준비 중입니다.')">10</button>
+    </div>
+  </main>
+  <footer>
+    copyright 2020. 한칼도사 All rights reserved.
+  </footer>
+
+</body>
+
+</html>
